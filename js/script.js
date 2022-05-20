@@ -1,21 +1,21 @@
 let pokemonList = [{
 	name: 'Ivysaur',
 	height: '1.0',
-	type: ['Grass', 'Poison']
+	types: ['Grass', 'Poison']
 }, {
 	name: 'Charmander',
 	height: '0.6',
-	type: ['Fire']
+	types: ['Fire']
 }, {
 	name: 'Arbok',
 	height: '3.5',
-	type: ['Poison']
+	types: ['Poison']
 }, {
 	name: 'Paras',
 	height: '0.3',
-	type: ['Grass', 'Bug']
+	types: ['Grass', 'Bug']
 }, {
 	name: 'Abra',
 	height: '0.9',
-	type: ['Psychic']
+	types: ['Psychic']
 }, ];
