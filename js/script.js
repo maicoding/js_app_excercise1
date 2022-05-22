@@ -18,7 +18,13 @@ let pokemonList = [{
 	name: 'Abra',
 	height: 0.9,
 	types: ['Psychic']
-}, ];
+},
+{
+	name: 'Wartortle',
+	height: 3.03,
+	types: ['Water']
+},
+ ];
 
 //Loop for displaying pokemons
 for (let i=0; i<pokemonList.length; i++){
