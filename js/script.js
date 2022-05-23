@@ -1,3 +1,5 @@
+<ul class ="pokemonlist"></ul>
+<script>
 let pokemonList = [{
 	name: 'Ivysaur',
 	height: 1.0,
@@ -30,6 +32,13 @@ let pokemonList = [{
 	abilities: ['Torrent']
 }, ];
 
+for (let i = 0; i < pokemonList.length; i++) {
+
+	let pokemonlList = document.createElement('li');
+	pokemonList.innerText = pokemonList[i];
+	document.querySelector('.pokemonlist').appendChild(pokemonlList);
+}
+
 //Loop for displaying pokemons
 for (let i = 0; i < pokemonList.length; i++) {
 	document.write(pokemonList[i].name + ' ' + 'height is ' + pokemonList[i].height + ' m! ');
@@ -43,3 +52,4 @@ for (let i = 0; i < pokemonList.length; i++) {
 		document.write(pokemonList[i].name + ' is size S. That\'s rather small! But do not underestimate me!' + '<br>');
 	}
 }
+ </script>
