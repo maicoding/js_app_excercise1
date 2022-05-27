@@ -32,22 +32,23 @@ let pokemonList = [{
 
 // Display the data on the page as an unordered list
 document.write('<ul class="pokemon-list">');
-
 // for loop
-pokemonList.forEach(function(pokemon) {
+for (let i = 0; i < pokemonList.length; i++) {
+    let currentPokemon = pokemonList[i];
+
+    // opening list element tag
     document.write(`
     <li class="pokemon-list__item">
-      ${pokemon.name}'s height is <span>${pokemon.height + "m."}</span>
+      ${currentPokemon.name} (height: <span>${currentPokemon.height}</span>)
   `);
-    if (pokemon.height > 1.4) {
+    if (currentPokemon.height > 1.4) {
         document.write(' - Wow, that\'s big!');
     }
-    if (pokemon.height < 1.4) {
+    if (currentPokemon.height < 1.4) {
         document.write(' - That\'s quite small!');
     }
     // closing the list element tag
     document.write('</li>');
-
-    // closing the ul tag
-    document.write('</ul>');
-});
+}
+// closing the ul tag
+document.write('</ul>');
