@@ -39,7 +39,7 @@ for (let i = 0; i < pokemonList.length; i++) {
     // opening list element tag
     document.write(`
     <li class="pokemon-list__item">
-      ${currentPokemon.name} (height: <span>${currentPokemon.height}</span>)
+      ${currentPokemon.name} is <span>${currentPokemon.height}</span> m.
   `);
     if (currentPokemon.height > 1.4) {
         document.write(' - Wow, that\'s big!');
