@@ -27,42 +27,32 @@ let pokemonRepository = (function () {
         abilities: ['Inner Focus', 'Synchronize']
     },]
 
-    function add(pokemon) {
-        pokemonList.push(pokemon);
-    }
-
     function getAll() {
         return pokemonList;
     }
+
+    function addListItem(pokemon) {
+        let pokemonList = document.querySelector(".pokemonList");
+        let listItem = document.createElement("li");
+        let button = document.createElement("button");
+        button.innerText = pokemon.name;
+        button.classList.add("poke-button")
+        listItem.appendChild(button);
+        pokemonList.appendChild(listItem);
+        button.addEventListener('click', function () {
+            showDetails(pokemon)
+        });
+
+    }
+    function showDetails(pokemon) {
+        console.log(pokemon);
+    }
     return {
-        add: add,
-        getAll: getAll
+        getAll: getAll,
+        addListItem: addListItem
     };
 })();
-pokemonRepository.add({
-    name: 'Wartortle',
-    'height': 3.03,
-    types: ['Water'],
-    abilities: ['Torrent']
+
+pokemonRepository.getAll().forEach(function (pokemon) {
+    pokemonRepository.addListItem(pokemon);
 });
-// Display the data on the page as an unordered list
-document.write('<ul class="pokemon-list">');
-let pokemonList = pokemonRepository.getAll();
-// for each
-pokemonList.forEach(function (pokemon) {
-    // opening list element tag
-    document.write(`
-    <li class="pokemon-list__item">
-      ${pokemon.name} is <span>${pokemon.height}</span> m.
-  `);
-    if (pokemon.height > 1.9) {
-        document.write(' - Wow, that\'s big!');
-    }
-    if (pokemon.height < 0.8) {
-        document.write(' - That\'s quite small!');
-    }
-    // closing the list element tag
-    document.write('</li>');
-});
-// closing the ul tag
-document.write('</ul>');

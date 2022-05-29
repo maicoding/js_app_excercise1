@@ -1,0 +1,41 @@
+:root {
+  --primary-color: #f05945;
+  /*red*/
+  --secondary-color: #f9f3f3;
+  /*white*/
+  --accent-color: #393232;
+  /*grey*/
+  --poke-accent-color: #d5e5f7;
+  /*blue*/
+  --poke-yellow: #ffcb05;
+  /*yellow*/
+}
+
+body {
+  background-color: #d5e5f7;
+  font-family: 'Acme', sans-serif;
+  font-size: 15px;
+  padding: 20px;
+  text-align: left;
+}
+
+h1 {
+  color: #393232;
+  font-family: 'Poppins', sans-serif;
+  font-size: 100px;
+  font-weight: 500;
+}
+
+.poke-button {
+  background-color: #ffcb05;
+  border-style: hidden;
+  box-shadow: 1px 1px;
+  font-size: medium;
+  height: auto;
+  margin: 5px;
+  width: 200px;
+}
+
+ul {
+  list-style-type: none;
+}
