@@ -28,7 +28,7 @@ h1 {
 
 .poke-button {
   background-color: #ffcb05;
-  border-style: hidden;
+  border-style: none;
   box-shadow: 1px 1px;
   font-size: medium;
   height: auto;
