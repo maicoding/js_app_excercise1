@@ -1,5 +1,5 @@
 // IIFE
-let pokemonRepository = (function () {
+let pokemonRepository = (function() {
     let pokemonList = [{
         name: 'Ivysaur',
         height: 1.0,
@@ -25,7 +25,8 @@ let pokemonRepository = (function () {
         height: 0.9,
         types: ['Psychic'],
         abilities: ['Inner Focus', 'Synchronize']
-    },]
+    }, ]
+
     function add(pokemon) {
         pokemonList.push(pokemon);
     }
@@ -41,14 +42,17 @@ let pokemonRepository = (function () {
 })();
 
 pokemonRepository.add({
-    name: 'Wartortle', 'height': 3.03, types: ['Water'], abilities: ['Torrent']
+    name: 'Wartortle',
+    'height': 3.03,
+    types: ['Water'],
+    abilities: ['Torrent']
 });
 
 // Display the data on the page as an unordered list
 document.write('<ul class="pokemon-list">');
 let pokemonList = pokemonRepository.getAll();
 // for each
-pokemonList.forEach(function (pokemon) {
+pokemonList.forEach(function(pokemon) {
 
     // opening list element tag
     document.write(`
@@ -63,7 +67,6 @@ pokemonList.forEach(function (pokemon) {
     }
     // closing the list element tag
     document.write('</li>');
-}
-);
+});
 // closing the ul tag
 document.write('</ul>');
