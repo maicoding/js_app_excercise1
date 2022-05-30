@@ -54,6 +54,25 @@ let pokemonRepository = (function() {
     };
 })();
 
-pokemonRepository.getAll().forEach(function(pokemon) {
-    pokemonRepository.addListItem(pokemon);
+// Display the data on the page as an unordered list
+document.write('<ul class="pokemon-list">');
+let pokemonList = pokemonRepository.getAll();
+// for each
+pokemonList.forEach(function(pokemon) {
+
+    // opening list element tag
+    document.write(`
+    <li class="pokemon-list__item">
+      ${pokemon.name} is <span>${pokemon.height}</span> m.
+  `);
+    if (pokemon.height > 1.9) {
+        document.write(' - Wow, that\'s big!');
+    }
+    if (pokemon.height < 0.8) {
+        document.write(' - That\'s quite small!');
+    }
+    // closing the list element tag
+    document.write('</li>');
 });
+// closing the ul tag
+document.write('</ul>');
