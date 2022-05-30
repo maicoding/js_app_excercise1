@@ -27,9 +27,6 @@ let pokemonRepository = (function() {
         abilities: ['Inner Focus', 'Synchronize']
     }, ]
 
-    function add(pokemon) {
-        pokemonList.push(pokemon);
-    }
 
     function getAll() {
         return pokemonList;
@@ -57,13 +54,6 @@ let pokemonRepository = (function() {
         addListItem: addListItem
     };
 })();
-
-pokemonRepository.add({
-    name: 'Wartortle',
-    'height': 3.03,
-    types: ['Water'],
-    abilities: ['Torrent']
-});
 
 // Display the data on the page as an unordered list
 document.write('<ul class="pokemon-list">');
