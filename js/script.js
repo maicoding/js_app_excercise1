@@ -35,9 +35,26 @@ let pokemonRepository = (function() {
         return pokemonList;
     }
 
+    function addListItem(pokemon) {
+        let pokemonList = document.querySelector(".pokemonList");
+        let listItem = document.createElement("li");
+        let button = document.createElement("button");
+        button.innerText = pokemon.name;
+        button.classList.add("poke-button")
+        listItem.appendChild(button);
+        pokemonList.appendChild(listItem);
+        button.addEventListener('click', function() {
+            showDetails(pokemon)
+        });
+
+    }
+
+    function showDetails(pokemon) {
+        console.log(pokemon);
+    }
     return {
-        add: add,
-        getAll: getAll
+        getAll: getAll,
+        addListItem: addListItem
     };
 })();
 
