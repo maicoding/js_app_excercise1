@@ -1,5 +1,5 @@
 // IIFE
-let pokemonRepository = (function () {
+let pokemonRepository = (function() {
     let pokemonList = [{
         name: 'Ivysaur',
         height: 1.0,
@@ -25,7 +25,7 @@ let pokemonRepository = (function () {
         height: 0.9,
         types: ['Psychic'],
         abilities: ['Inner Focus', 'Synchronize']
-    },]
+    }, ]
 
     function getAll() {
         return pokemonList;
@@ -39,11 +39,12 @@ let pokemonRepository = (function () {
         button.classList.add("poke-button")
         listItem.appendChild(button);
         pokemonList.appendChild(listItem);
-        button.addEventListener('click', function () {
+        button.addEventListener('click', function() {
             showDetails(pokemon)
         });
 
     }
+
     function showDetails(pokemon) {
         console.log(pokemon);
     }
@@ -53,6 +54,6 @@ let pokemonRepository = (function () {
     };
 })();
 
-pokemonRepository.getAll().forEach(function (pokemon) {
+pokemonRepository.getAll().forEach(function(pokemon) {
     pokemonRepository.addListItem(pokemon);
 });
