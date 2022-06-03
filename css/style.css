@@ -1,6 +1,6 @@
 */:root {
   /*Colors*/
-  --primary-color: #f05945;
+  --primary-color: #9b1504;
   /*red*/
   --secondary-color: #f9f3f3;
   /*white*/
@@ -21,11 +21,13 @@
   box-sizing: border-box;
 }
 
+/* General items */
 body {
   background-color: #d5e5f7;
   font-family: 'Acme', sans-serif;
   font-size: 15px;
   text-align: center;
+  justify-content: center;
 }
 
 h1 {
@@ -37,11 +39,11 @@ h1 {
 }
 
 .container {
-  align-items: center;
   display: flexbox;
   width: 100%;
 }
 
+/* Button */
 .poke-button {
   border-radius: 10rem;
   border-style: none;
@@ -68,7 +70,7 @@ h1 {
   left: 0;
   position: absolute;
   width: 100%;
-  z-index: -2;
+  z-index: -3;
 }
 
 .poke-button:before {
@@ -82,7 +84,7 @@ h1 {
   position: absolute;
   transition: all 0.3s;
   width: 0%;
-  z-index: -1;
+  z-index: -2;
 }
 
 .poke-button:hover {
@@ -104,6 +106,54 @@ ul,
   list-style-type: none;
   justify-content: center;
   padding: 0%;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+  background-color: #f4f4f4;
+  border-radius: .3rem;
+  justify-items: center;
+  margin: 20% auto;
+  padding-top: 20px;
+  width: 60%;
+  height: 30%;
+  min-width: 200px;
+  max-width: 400px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.modal-title, .modal-body {
+  justify-content: center;
+  text-align: center;
+}
+
+.closeBtn {
+  color: #9b1504;
+  float: right;
+  font-size: 30px;
+}
+
+.closeBtn:hover, .closeBtn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.is-visible {
+  display: block;
 }
 
 /* Responsive Media Queries */
