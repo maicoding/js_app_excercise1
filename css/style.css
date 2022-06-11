@@ -1,47 +1,49 @@
 */:root {
   /*Colors*/
-  --primary-color: #9b1504;
+	--primary-color: #9b1504;
   /*red*/
-  --secondary-color: #f9f3f3;
+	--secondary-color: #f9f3f3;
   /*white*/
-  --accent-color: #393232;
+	--accent-color: #393232;
   /*grey*/
-  --poke-accent-color: #d5e5f7;
+	--poke-accent-color: #d5e5f7;
   /*light blue*/
-  --poke-yellow: #ffcb05;
+	--poke-yellow: #ffcb05;
   /*yellow*/
-  --poke-blue: #3c5aa6;
+	--poke-blue: #3c5aa6;
   /*blue*/
-  ;
+	;
 }
 
 /* Styles for general items */
 body {
-  background-color: #d5e5f7;
-  font-family: 'Acme', sans-serif;
-  font-size: 15px;
-  text-align: center;
-  justify-content: center;
+	background-color: #d5e5f7;
+	font-family: 'Acme', sans-serif;
+	font-size: 15px;
+	text-align: center;
+	justify-content: center;
 }
 
 h1 {
-  color: #393232;
-  font-family: 'Poppins', sans-serif;
-  font-size: 60px;
-  font-weight: 500;
-  text-align: center;
-  text-transform: capitalize;
+	color: #393232;
+	font-family: 'Poppins', sans-serif;
+	font-size: 60px;
+	font-weight: 500;
+	text-align: center;
+	text-transform: capitalize;
 }
 
 h2 {
-  font: inherit;
-  font-size: 30px;
-  text-align: left;
+	font: inherit;
+	font-size: 30px;
+	text-align: left;
 }
 
+
+
 .container {
-  display: flexbox;
-  width: 100%;
+	display: flexbox;
+	width: 100%;
 }
 
 /* Styles for Logo */
@@ -53,109 +55,109 @@ h2 {
 
 /* Styles for Pokemon List */
 .list-group {
-  list-style-type: none;
-  text-align: center;
+	list-style-type: none;
+	text-align: center;
 }
 
 .list-group-item, .list-group-item:hover, .list-group-item:focus, .list-group-item-action, .list-group-item-action:focus, .list-group-item.-action:hover {
-  background-color: transparent;
-  border: none;
+	background-color: transparent;
+	border: none;
 }
 
 .list-group-action-active-color {
-  color: #fff;
+	color: #fff;
 }
 
 /* Styles for Button */
 .btn-custom {
-  border-radius: 10rem;
-  color: #ffffff;
-  display: inline-block;
-  font-size: 1rem;
-  letter-spacing: 0.15rem;
-  margin: 10px;
+	border-radius: 10rem;
+	color: #ffffff;
+	display: inline-block;
+	font-size: 1rem;
+	letter-spacing: 0.15rem;
+	margin: 10px;
   outline: none;
-  overflow: hidden;
-  padding: 0.75rem 1.25rem;
-  position: relative;
-  text-transform: uppercase;
-  transition: all 0.3s;
-  width: 250px;
-  z-index: 1;
+	overflow: hidden;
+	padding: 0.75rem 1.25rem;
+	position: relative;
+	text-transform: uppercase;
+	transition: all 0.3s;
+	width: 250px;
+	z-index: 1;
 }
 
 .btn-custom:after {
-  background-color: #3c5aa6;
-  color: #ffffff;
-  border-radius: 10rem;
-  bottom: 0;
-  content: '';
-  height: 100%;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  z-index: -3;
+	background-color: #3c5aa6;
+	color: #ffffff;
+	border-radius: 10rem;
+	bottom: 0;
+	content: '';
+	height: 100%;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	z-index: -3;
 }
 
 .btn-custom:before {
-  background-color: #ffcb05;
-  border-radius: 10rem;
-  bottom: 0;
-  color: #393232;
-  content: '';
-  height: 100%;
-  left: 0;
-  position: absolute;
-  transition: all 0.3s;
-  width: 0%;
-  z-index: -2;
+	background-color: #ffcb05;
+	border-radius: 10rem;
+	bottom: 0;
+	color: #393232;
+	content: '';
+	height: 100%;
+	left: 0;
+	position: absolute;
+	transition: all 0.3s;
+	width: 0%;
+	z-index: -2;
 }
 
 .btn-custom:hover:before {
-  width: 100%;
+	width: 100%;
 }
 
-.btn-custom-link:visited, .btn-custom-link:active, .btn-custom-link:focus, .btn-custom-link:hover {
-  color: #fff;
+.btn-custom-link:visited, .btn-custom-link:active., .btn-custom-link:focus, .btn-custom-link:hover {
+  color:#fff;
 }
 
 /* Styles for Modal */
 .modal-content {
-  background-color: #ffffff;
-  text-align: center;
+	background-color: #ffffff;
+	text-align: center;
 }
 
 .modal-title {
-  font-size: smaller;
+	font-size: smaller;
 }
 
 .close {
-  color: #393232;
+	color: #393232;
 }
 
 .close:hover {
-  color: #393232;
-  opacity: 0.8;
+	color: #393232;
+	opacity: 0.8;
 }
 
 #poke-modal-body {
-  line-height: 10px;
+	line-height: 10px;
 }
 
 #about-modal-body {
-  line-height: 30px;
+	line-height: 30px;
 }
 
 .pokemon-sprite {
-  filter: drop-shadow(5px 5px 5px black);
-  width: 50%;
-  margin-bottom: 20px;
+	filter: drop-shadow(5px 5px 5px black);
+	width: 50%;
+	margin-bottom: 20px;
 }
 
 .pokemon-type {
-  text-transform: capitalize;
+	text-transform: capitalize;
 }
 
 .page-container {
-  margin: 3px;
+	margin: 3px;
 }
