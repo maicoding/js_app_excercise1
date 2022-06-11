@@ -16,3 +16,5 @@ jQuery
 Bootstrap
 Pokemon API
 Ajax
+
+![This is a screenshot of the Pokemon App](screenhotPokemonApp.png)
