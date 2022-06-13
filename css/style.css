@@ -117,8 +117,12 @@ h2 {
 	width: 100%;
 }
 
-.btn-custom-link:visited, .btn-custom-link:active., .btn-custom-link:focus, .btn-custom-link:hover {
+.btn-custom-link:visited, .btn-custom-link:active, .btn-custom-link:focus, .btn-custom-link:hover {
   color:#fff;
+}
+
+.btn.focus, .btn:focus {
+  color: #fff;
 }
 
 /* Styles for Modal */
